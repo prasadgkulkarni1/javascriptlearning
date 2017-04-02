@@ -37,12 +37,12 @@ var SettingsParser = {
   },
 
   parseJsonString: function(){
-      alert(this.settingsJsonString)
+      console.log(this.settingsJsonString)
       this.settings = JSON.parse(this.settingsJsonString);
   },
 
   printJson: function(){
-      alert(this.settings.SETTINGS_RELEASE);
+      console.log(this.settings.SETTINGS_RELEASE);
   },
 
   getSettings: function(){
@@ -77,8 +77,8 @@ function displayContents(contents) {
   settings.parseJsonString();
   settings.printJson();
 
-  alert("The prototype of settings object is SettingsParser:" + (Object.getPrototypeOf(settings) === SettingsParser))
-  alert("The prototype of SettingsParser object is Object's prototype:" + (Object.getPrototypeOf(SettingsParser) === Object.prototype))
+  console.log("The prototype of settings object is SettingsParser:" + (Object.getPrototypeOf(settings) === SettingsParser))
+  console.log("The prototype of SettingsParser object is Object's prototype:" + (Object.getPrototypeOf(SettingsParser) === Object.prototype))
 }
 
 //Reads the file-input HTML element and calls the parser once a file is uploaded.
